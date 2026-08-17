@@ -1,0 +1,38 @@
+class Employee {
+    int id;
+    String name;
+    double basicSalary;
+    double hra;
+    double da;
+    double grossSalary;
+    //parameterised constructor
+   Employee(int id,String name,double basicSalary){
+    this.id=id;
+    this.name=name;
+    this.basicSalary=basicSalary;
+   }
+    void displayDetails(){
+        System.out.println("Employee Id: "+id);
+        System.out.println("Employee Name: "+name);
+        System.out.println("Employee Salary: "+basicSalary);
+        System.out.println("hra: "+hra);
+         System.out.println("da: "+da);
+          System.out.println("Gross Salary: "+grossSalary);
+    }
+    void grossCalculation(){
+        hra=basicSalary*0.2;
+        da=basicSalary*0.1;
+        grossSalary=basicSalary+hra+da;
+    }
+}
+    
+class Main {
+    public static void main(String[] args){
+        Employee e1=new Employee(78,"Maya",98000);
+        e1.grossCalculation();
+        e1.displayDetails();
+       Employee e2=new Employee(79,"Zayn",95000);
+        e2.grossCalculation();
+        e2.displayDetails();
+    }
+}
