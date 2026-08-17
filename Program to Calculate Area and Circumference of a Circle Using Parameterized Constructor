@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class Circle {
+    double radius;
+    Circle(double radius){
+        this.radius=radius;
+    }
+    double calArea(){
+        return Math.PI*radius*radius;
+    }
+    double calCircum(){
+        return 2*Math.PI*radius;
+    } 
+}
+public class Main {
+    public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    System.out.print("Enter the radius: ");
+    double r=sc.nextDouble();
+    Circle c=new Circle(r);
+    System.out.println("Area= "+c.calArea());
+    System.out.println("Cirumference= "+c.calCircum());
+    sc.close();
+    }
+}
+
+
+class Demo{
+    public static void main(String[] args){
+        final int MAX=100;
+        System.out.println(MAX);
+     
+    }
+}
+
+
+
