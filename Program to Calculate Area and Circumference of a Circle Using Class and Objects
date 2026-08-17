@@ -1,0 +1,28 @@
+class Circle {
+    int r;
+    double pi=3.14;
+   double area;
+   double circumference;
+    void displayDetails(){
+       System.out.println("Radius of the circle: "+r);
+       System.out.println("Area of the circle: "+area);
+       System.out.println("Circumference of te circle: "+circumference);
+    }
+    void areaCircle(){
+      area= pi*r*r;
+    }
+    void circumferenceCircle(){
+        circumference=2*pi*r;
+    }
+}
+    
+class Main {
+    public static void main(String[] args){
+       Circle c1=new Circle();
+       c1.r=4;
+        c1.areaCircle();
+        c1.circumferenceCircle();
+        c1.displayDetails();
+       
+    }
+}
