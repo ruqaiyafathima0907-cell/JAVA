@@ -1,0 +1,41 @@
+class Student {
+    String name;
+    int[] marks;
+
+    Student(String name, int[] marks) {
+        this.name = name;
+        this.marks = marks;
+    }
+
+    int totalMarks() {
+        int total = 0;
+        for (int mark : marks) {
+            total = total + mark;
+        }
+        return total;
+    }
+
+    void displayResult() {
+        int total = totalMarks();
+        double percentage = total / 3.0;
+
+        System.out.println("Student: " + name.toUpperCase());
+        System.out.println("Total: " + total);
+        System.out.println("Percentage: " + percentage);
+
+        if (percentage >= 35) {
+            System.out.println("Result: Pass");
+        } else {
+            System.out.println("Result: Fail");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int[] marks = {80, 75, 90};
+
+        Student s1 = new Student("Asha", marks);
+        s1.displayResult();
+    }
+}
