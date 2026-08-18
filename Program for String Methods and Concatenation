@@ -1,0 +1,10 @@
+class Main {
+public static void main(String[] args){
+String college = "Garden City University";
+String city = "Bengaluru";
+System.out.println(college.length());
+System.out.println(college.toUpperCase());
+System.out.println(college.charAt(0));
+System.out.println(college + " - " + city);
+}
+}
