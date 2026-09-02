@@ -1,0 +1,25 @@
+class Vehicle {
+    void wheel(){
+        System.out.println("Every vehicle has wheels");
+    }
+}
+class BuyYour extends Vehicle{
+    void touchScreen(){
+        System.out.println("Rotating Touch screen");
+    }
+}
+class Skoda extends Vehicle{
+    void engine(){
+        System.out.println("Turbo engine");
+    }
+}
+class Main {
+    public static void main(String[] args){
+       BuyYour b=new BuyYour();
+       b.wheel();
+       b.touchScreen();
+       Skoda s=new Skoda();
+       s.wheel();
+       s.engine();
+    }
+}
