@@ -1,0 +1,20 @@
+class Student {
+    static String college = "GCU";
+    static int count = 0;
+    String name;
+    Student(String n) {
+        name = n;
+        count++;
+    }
+    static void displayCount() {
+        System.out.println("Number of students: " + count);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Maya");
+        Student s2 = new Student("Zayn");
+        System.out.println("College: " + Student.college);
+        Student.displayCount();
+    }
+}
