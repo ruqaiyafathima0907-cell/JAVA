@@ -1,0 +1,23 @@
+class Vehicle{
+    void airConditioner() {
+        System.out.println("Air conditioner");
+    }
+}
+class Honda extends Vehicle{
+    void walkAway(){
+        System.out.println("Walk Away Lock");
+    }
+}
+class Buy extends Honda{
+    void touch(){
+        System.out.println("Touch screen");
+    }
+}
+class Main {
+    public static void main(String[] args){
+        Buy b=new Buy();
+        b.airConditioner();
+        b.walkAway();
+        b.touch();
+    }
+}
