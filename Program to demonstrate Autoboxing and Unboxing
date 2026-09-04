@@ -1,0 +1,26 @@
+class Demo{
+  public static void main(String[] args){
+    int num=10;
+    double price=25.50;
+    char grade='A';
+    boolean status=true;
+    Integer intObj=Integer.valueOf(num);
+    Double doubleObj=Double.valueOf(price);
+    Character charObj=Character.valueOf(grade);
+    Boolean boolObj=Boolean.valueOf(status);
+    System.out.print("Integer object: "+intObj);
+     System.out.print("Double object: "+doubleObj);
+     System.out.print("Character object: "+charObj);
+     System.out.print("boolean Object: "+boolObj);
+    int n=intObj.intValue();
+    double p=doubleObj.doubleValue();
+    char g=charObj.charValue();
+    boolean s=boolObj.booleanValue();
+    System.out.println("\nAfter unboxing");
+    System.out.println("Integer: "+n);
+    System.out.println("Double: "+p);
+    System.out.println("Character: "+g);
+    System.out.println("Boolean: "+s);
+  }
+}
+    
