@@ -1,0 +1,32 @@
+ass Animal{
+    void eat(){
+        System.out.println("Animal eats");
+    }
+}
+class Mammal extends Animal{
+    void walk(){
+        System.out.println("Mammal walks");
+    }
+}
+class Dog extends Mammal{
+    void bark(){
+        System.out.println("Dog barks");
+    }
+}
+class Cat extends Mammal{
+    void meow(){
+        System.out.println("Cat meows");
+    }
+}
+class Main {
+    public static void main(String[] args){
+        Dog d=new Dog();
+        d.eat();
+        d.walk();
+        d.bark();
+        Cat c=new Cat();
+        c.eat();
+        c.walk();
+        c.meow();
+    }
+}
