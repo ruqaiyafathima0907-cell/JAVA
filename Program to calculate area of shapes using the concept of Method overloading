@@ -1,0 +1,21 @@
+class Allarea {
+    double pi=3.14;
+    double area(double radius) {
+        return pi * radius * radius;
+    }
+    double area(double length, double breadth) {
+        return length * breadth;
+    }
+    int area(int side) {
+        return side * side;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Allarea a = new Allarea();
+        System.out.println("Area of Circle: " + a.area(2.0));
+        System.out.println("Area of Rectangle: " + a.area(2.0, 5.0));
+        System.out.println("Area of Square: " + a.area(2));
+    }
+}
