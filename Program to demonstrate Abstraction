@@ -1,0 +1,28 @@
+abstract class Shape {
+    abstract void area();
+}
+class Circle extends Shape {
+    void area() {
+        double r = 5;
+        double a = 3.14 * r * r;
+        System.out.println("Area of Circle = " + a);
+    }
+} 
+class Rectangle extends Shape {
+    void area() {
+        int l = 10;
+        int b = 5;
+        int a = l * b;
+        System.out.println("Area of Rectangle = " + a);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape s1 = new Circle();
+        Shape s2 = new Rectangle();
+
+        s1.area();
+        s2.area();
+    }
+}
