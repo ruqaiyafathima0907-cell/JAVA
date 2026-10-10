@@ -1,0 +1,44 @@
+class Bank {
+    int getRateOfInterest() {
+        return 0;
+    }
+}
+class SBI extends Bank {
+    int getRateOfInterest() {
+        return 7;
+    }
+
+    double simpleInterest(double amount, int months) {
+        double time = months / 12.0;
+        return (amount * getRateOfInterest() * time) / 100;
+    }
+}
+class ICICI extends Bank {
+    int getRateOfInterest() {
+        return 8;
+    }
+
+    double simpleInterest(double amount, int months) {
+        double time = months / 12.0;
+        return (amount * getRateOfInterest() * time) / 100;
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        double amount = 10000;
+        int months = 12;
+        SBI s = new SBI();
+        ICICI i = new ICICI();
+        double sbiInterest = s.simpleInterest(amount, months);
+        double iciciInterest = i.simpleInterest(amount, months);
+        System.out.println("Principal amount: " + amount);
+        System.out.println("Time: " + months + " months");
+        System.out.println("\nSBI Rate of Interest: "                   + s.getRateOfInterest() + "%");
+        System.out.println("SBI Simple Interest: " + sbiInterest);
+        System.out.println("SBI Total Amount: " + (amount + sbiInterest));
+        System.out.println("\nICICI Rate of Interest: " 
+                           + i.getRateOfInterest() + "%");
+        System.out.println("ICICI Simple Interest: " + iciciInterest);
+        System.out.println("ICICI Total Amount: " + (amount + iciciInterest));
+    }
+}
